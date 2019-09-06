@@ -68,7 +68,6 @@ class Config(object):
         "blacklist",
         "filters",
         "locks",
-        "pmpermit",
         "snip",
         "welcome",
         "gban"
@@ -80,7 +79,7 @@ class Config(object):
     SLAP_USERNAME = os.environ.get("SLAP_USERNAME", None)
     GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
     GIT_REPO_NAME = os.environ.get("GIT_REPO_NAME", None)
-    NO_P_M_SPAM = bool(os.environ.get("NO_P_M_SPAM", False))
+    NO_P_M_SPAM = bool(os.environ.get("NO_P_M_SPAM", True))
     # define "spam" in PMs
     MAX_FLOOD_IN_P_M_s = int(os.environ.get("MAX_FLOOD_IN_P_M_s", 3))
     # set to True if you want to log PMs to your PM_LOGGR_BOT_API_ID

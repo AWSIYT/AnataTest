@@ -1,14 +1,14 @@
 {
-  "name": "PornHub",
-  "description": "Only For Legends..... By : @r4v4n4",
+  "name": "TestMkl",
+  "description": "Only For Legends..... ",
   "logo": "https://telegra.ph/file/18cea3a9a7d9b3261dc1a.jpg",
   "keywords": [
-    "sex",
-    "porn",
-    "xxx",
-    "dick",
-    "vagina",
-    "boobs"
+    "Uniborg",
+    "Uniborg",
+    "Uniborg",
+    "Uniborg",
+    "Uniborg",
+    "Uniborg"
   ],
   "repository": "https://gitlab.com/SpEcHiDe/UniBorg",
   "website": "https://telegram.dog/UniBorg",
@@ -123,7 +123,7 @@
     },
     "SUDO_USERS": {
       "description": "Makes Your Account Stable.",
-      "value": "138312364",
+      "value": "-100",
       "required": false
     },
     "TZ": {

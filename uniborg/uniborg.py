@@ -33,7 +33,7 @@ class Uniborg(TelegramClient):
             "api_id": 6,
             "api_hash": "eb06d4abfb49dc3eeb1aeb98ae0f581e",
             "device_model": "Iphone XS Max (Clone)",
-            "app_version": "@r4v4n4",
+            "app_version": "@uniborg",
             "lang_code": "ml",
             **kwargs
         }

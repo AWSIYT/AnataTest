@@ -15,10 +15,10 @@ borg.storage.PM_WARNS = {}
 borg.storage.PREV_REPLY_MESSAGE = {}
 
 
-BAALAJI_TG_USER_BOT = "IT: Bene. Hai ricevuto il permesso di messaggiare con me!\n\nEN: Well. You have received permission to send messages with me!"
-TG_COMPANION_USER_BOT = "IT: Per favore non spammare. Attendi la risposta del mio padrone.\n\nEN: Please don't spam. Wait for my master's reply."
-UNIBORG_USER_BOT_WARN_ZERO = "IT: Non spammare. Il padrone mi ha dato l'ordine di bloccare chi spamma.\n\nEN: Don't spam. My master gave me the order to block the spammers."
-UNIBORG_USER_BOT_NO_WARN = "IT: Ciao!! Sono l'userbot di AWSI! Il mio padrone é attualmente occupato/offline. Attendi la sua risposta\n\nEN: Hello!! I'm the AWSI userbot! My owner is currently busy / offline. Wait for his reply"
+BAALAJI_TG_USER_BOT = "IT: Bene. Hai ricevuto il permesso di messaggiare con il mio Capo!\n\nEN: Well. You have received permission to send messages with my Leader!"
+TG_COMPANION_USER_BOT = "IT: Per favore non spammare. Attendi la risposta del mio Capo.\n\nEN: Please don't spam. Wait for my Leader's reply."
+UNIBORG_USER_BOT_WARN_ZERO = "IT: Non spammare. Il Capo mi ha dato l'ordine di bloccare chi spamma.\n\nEN: Don't spam. My Leader gave me the order to block the spammers."
+UNIBORG_USER_BOT_NO_WARN = "IT: Ciao!! Sono l'userbot di AWSI! Il mio Capo é attualmente occupato/offline. Attendi la sua risposta\n\nEN: Hello!! I'm the AWSI userbot! My Leader is currently busy / offline. Wait for his reply"
 
 
 @borg.on(events.NewMessage(incoming=True, func=lambda e: e.is_private))
@@ -68,7 +68,7 @@ async def approve_p_m(event):
                     await borg.storage.PREV_REPLY_MESSAGE[chat.id].delete()
                     del borg.storage.PREV_REPLY_MESSAGE[chat.id]
                 approve(chat.id, reason)
-                await event.edit("──███▅▄▄▄▄▄▄▄▄▄\n─██▐████████████\n▐█▀████████████▌▌\n▐─▀▀▀▐█▌▀▀███▀█─▌\n▐▄───▄█───▄█▌▄█ \n\n IT: Bene. Hai ricevuto il permesso di messaggiare con me!\n\nEN: Well. You have received permission to send messages with me!")
+                await event.edit("──███▅▄▄▄▄▄▄▄▄▄\n─██▐████████████\n▐█▀████████████▌▌\n▐─▀▀▀▐█▌▀▀███▀█─▌\n▐▄───▄█───▄█▌▄█ \n\n IT: Bene. Hai ricevuto il permesso di messaggiare con il mio Capo!\n\nEN: Well. You have received permission to send messages with my Leader!")
                 await asyncio.sleep(3)
                 await event.delete()
 

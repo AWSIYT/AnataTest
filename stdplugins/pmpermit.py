@@ -15,10 +15,10 @@ borg.storage.PM_WARNS = {}
 borg.storage.PREV_REPLY_MESSAGE = {}
 
 
-BAALAJI_TG_USER_BOT = "My Master hasn't approved you to PM."
-TG_COMPANION_USER_BOT = "Please wait for his response and don't spam his PM."
-UNIBORG_USER_BOT_WARN_ZERO = "I am currently offline. Please do not SPAM me."
-UNIBORG_USER_BOT_NO_WARN = "Hi! I will answer to your message soon. Please wait for my response and don't spam my PM. Thanks \n\nI Am Offline Now....."
+BAALAJI_TG_USER_BOT = "IT: Bene. Hai ricevuto il permesso di messaggiare con me!\nEN: Well. You have received permission to send messages with me!"
+TG_COMPANION_USER_BOT = "IT: Per favore non spammare. Attendi la risposta del mio padrone.\nEN: Please don't spam. Wait for my master's reply."
+UNIBORG_USER_BOT_WARN_ZERO = "IT: Non spammare. Il padrone mi ha dato l'ordine di bloccare chi spamma.\nEN: Don't spam. My master gave me the order to block the spammers."
+UNIBORG_USER_BOT_NO_WARN = "IT: Ciao!! Sono l'userbot di AWSI! Il mio padrone é attualmente occupato/offline. Attendi la sua risposta\nEN: Hello!! I'm the AWSI userbot! My owner is currently busy / offline. Wait for his reply"
 
 
 @borg.on(events.NewMessage(incoming=True, func=lambda e: e.is_private))
@@ -68,7 +68,7 @@ async def approve_p_m(event):
                     await borg.storage.PREV_REPLY_MESSAGE[chat.id].delete()
                     del borg.storage.PREV_REPLY_MESSAGE[chat.id]
                 approve(chat.id, reason)
-                await event.edit("──███▅▄▄▄▄▄▄▄▄▄\n─██▐████████████\n▐█▀████████████▌▌\n▐─▀▀▀▐█▌▀▀███▀█─▌\n▐▄───▄█───▄█▌▄█ \n\n My Master Has Approved You To PM Me...")
+                await event.edit("──███▅▄▄▄▄▄▄▄▄▄\n─██▐████████████\n▐█▀████████████▌▌\n▐─▀▀▀▐█▌▀▀███▀█─▌\n▐▄───▄█───▄█▌▄█ \n\n IT: Bene. Hai ricevuto il permesso di messaggiare con me!\nEN: Well. You have received permission to send messages with me!")
                 await asyncio.sleep(3)
                 await event.delete()
 
@@ -83,7 +83,7 @@ async def approve_p_m(event):
         if event.is_private:
             if is_approved(chat.id):
                 disapprove(chat.id)
-                await event.edit("███████▄▄███████████▄  \n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓█░░░░░░░░░░░░░░█\n▓▓▓▓▓▓███░░░░░░░░░░░░█\n██████▀▀▀█░░░░██████▀  \n░░░░░░░░░█░░░░█  \n░░░░░░░░░░█░░░█  \n░░░░░░░░░░░█░░█  \n░░░░░░░░░░░█░░█  \n░░░░░░░░░░░░▀▀ \n\nFuck Off Bitch, Now You Can't Message Me...")
+                await event.edit("")
                 await asyncio.sleep(3)
                 await borg(functions.contacts.BlockRequest(chat.id))
 
@@ -93,7 +93,7 @@ async def approve_p_m(event):
     if event.fwd_from:
         return
     approved_users = get_all_approved()
-    APPROVED_PMs = "───────────────▄▄───▐█\n───▄▄▄───▄██▄──█▀───█─▄\n─▄██▀█▌─██▄▄──▐█▀▄─▐█▀\n▐█▀▀▌───▄▀▌─▌─█─▌──▌─▌\n▌▀▄─▐──▀▄─▐▄─▐▄▐▄─▐▄─▐▄ \n\nApproved PMs....\n"
+    APPROVED_PMs = "───────────────▄▄───▐█\n───▄▄▄───▄██▄──█▀───█─▄\n─▄██▀█▌─██▄▄──▐█▀▄─▐█▀\n▐█▀▀▌───▄▀▌─▌─█─▌──▌─▌\n▌▀▄─▐──▀▄─▐▄─▐▄▐▄─▐▄─▐▄ \n\nIT: Chat Approvate\nEN: Approved PMs\n"
     for a_user in approved_users:
         if a_user.reason:
             APPROVED_PMs += f"👉 [{a_user.chat_id}](tg://user?id={a_user.chat_id}) for {a_user.reason}\n"

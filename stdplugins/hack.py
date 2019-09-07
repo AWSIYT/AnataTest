@@ -1,4 +1,4 @@
-"""command: .hack"""
+"""command: .virus"""
 
 from telethon import events
 
@@ -22,23 +22,31 @@ async def _(event):
 
     input_str = event.pattern_match.group(1)
 
-    if input_str == "hack":
+    if input_str == "virus":
 
         await event.edit(input_str)
 
         animation_chars = [
         
-            "`Connecting To Hacked Private Server...`",
-            "`Target Selected.`",
-            "`Hacking... 0%\n▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
-            "`Hacking... 4%\n█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
-            "`Hacking... 8%\n██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",    
-            "`Hacking... 20%\n█████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
-            "`Hacking... 36%\n█████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
-            "`Hacking... 52%\n█████████████▒▒▒▒▒▒▒▒▒▒▒▒ `",
-            "`Hacking... 84%\n█████████████████████▒▒▒▒ `",
-            "`Hacking... 100%\n█████████HACKED███████████ `",
-            "`Targeted Account Hacked...\n\nPay 999$ To @r4v4n4 To Remove This Hack`"
+            "`Inietto il virus nella chat`\n\n`I inject the virus into the chat`",
+            "`Inietto il virus nella chat.`\n\n`I inject the virus into the chat.`",
+            "`Inietto il virus nella chat..`\n\n`I inject the virus into the chat..`",
+            "`Inietto il virus nella chat...`\n\n`I inject the virus into the chat...`",
+            "`Connessione al server dell'utente.`\n\n`Connection to the user's server.`",
+            "`Connessione al server dell'utente..`\n\n`Connection to the user's server..`",
+            "`Connessione al server dell'utente...`\n\n`Connection to the user's server....`",
+            "`Connessione al server dell'utente.`\n\n`Connection to the user's server.`",
+            "`Connessione al server dell'utente..`\n\n`Connection to the user's server..`",
+            "`Target selezionato.\n\nTarget Selected.`",
+            "`Injection in progress. 0%\n▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
+            "`Injection in progress.. 4%\n█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
+            "`Injection in progress... 8%\n██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",    
+            "`Injection in progress. 20%\n█████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
+            "`Injection in progress.. 36%\n█████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
+            "`Injection in progress... 52%\n█████████████▒▒▒▒▒▒▒▒▒▒▒▒ `",
+            "`Injection in progress. 84%\n█████████████████████▒▒▒▒ `",
+            "`Injection completed.. 100%\n█████████████████████████ `",
+            "`Account Mirato Compromesso...\n\nPagare 50€ a @AnataWaShindeIru per rimuovere questo Virus`\n\n`Targeted Account Hacked...\n\nPay 50$ to @AnataWaShindeIru o remove this Virus`"
         ]
 
         for i in animation_ttl:

@@ -18,6 +18,9 @@ async def _(event):
     input_str = event.pattern_match.group(1)
     if input_str == "shrug":
         await event.edit("¯\_(ツ)_/¯")
+        animation_chars = [
+            "¯\_(ツ)_/¯",
+            "-__(ツ)__-"
     elif input_str == "apple":
         await event.edit("\uF8FF")
     elif input_str == ":/":
